@@ -1,4 +1,3 @@
-
 def Mayor_que(men,texto):
     k = -1
     while k < men:
@@ -16,9 +15,13 @@ def Impuesto_Pais(producto):
     return i_p
 
 
-def Impuesto_Extranjero(producto):
-    i_ex = (producto * 35) / 100
-    return i_ex
+def percepciones(producto):
+    per = (producto * 45) / 100
+    return per
+
+def ingresos_brutos(producto):
+    i_b =(producto * 3)/100
+    return i_b
 
 
 def test():
@@ -26,9 +29,10 @@ def test():
     producto = Mayor_que(0,"\033[1;33mIntroduzca el precio base del producto: ")
     iva = Iva(producto)
     i_p = Impuesto_Pais(producto)
-    i_ex = Impuesto_Extranjero(producto)
-    final = iva + i_p + i_ex + producto
-    print("\033[1;33mEl precio final es: ",final)
+    per = percepciones(producto)
+    i_b = ingresos_brutos(producto)
+    final = iva + i_p + per + producto + i_b
+    print("\033[1;33mEl precio final es: ",round(final,2))
     input("Ingrese cualquier tecla para terminar: ")
 
 if __name__ == "__main__":
