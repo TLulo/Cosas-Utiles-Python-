@@ -21,7 +21,7 @@ def Impuesto_Extranjero(producto):
     return i_ex
 
 
-def Bienvenida():
+def test():
     print("\033[1;30;46mBienvenido al sistema de calculo de precios de productos extranjeros con impuesto(iva,pais,extranjero).")
     producto = Mayor_que(0,"\033[1;33mIntroduzca el precio base del producto: ")
     iva = Iva(producto)
@@ -31,4 +31,5 @@ def Bienvenida():
     print("\033[1;33mEl precio final es: ",final)
     input("Ingrese cualquier tecla para terminar: ")
 
-Bienvenida()
+if __name__ == "__main__":
+    test()
