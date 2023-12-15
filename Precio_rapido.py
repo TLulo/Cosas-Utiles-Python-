@@ -11,10 +11,10 @@ def Iva(producto):
 
 
 def Impuesto_Pais(producto):
-    i_p = (producto * 8)/100
+    i_p = (producto * 48)/100
     return i_p
 
-
+"""
 def percepciones(producto):
     per = (producto * 45) / 100
     return per
@@ -22,16 +22,14 @@ def percepciones(producto):
 def ingresos_brutos(producto):
     i_b =(producto * 3)/100
     return i_b
-
+"""
 
 def test():
-    print("\033[1;30;46mBienvenido al sistema de calculo de precios de productos extranjeros con impuesto(iva,pais,extranjero).")
+    print("\033[1;30;46mBienvenido al sistema de calculo de precios de productos extranjeros con impuesto(Diciembre 2023).")
     producto = Mayor_que(0,"\033[1;33mIntroduzca el precio base del producto: ")
     iva = Iva(producto)
     i_p = Impuesto_Pais(producto)
-    per = percepciones(producto)
-    i_b = ingresos_brutos(producto)
-    final = iva + i_p + per + producto + i_b
+    final = iva + i_p + per + producto
     print("\033[1;33mEl precio final es: ",round(final,2))
     input("Ingrese cualquier tecla para terminar: ")
 
