@@ -29,7 +29,7 @@ def test():
     producto = Mayor_que(0,"\033[1;33mIntroduzca el precio base del producto: ")
     iva = Iva(producto)
     i_p = Impuesto_Pais(producto)
-    final = iva + i_p + per + producto
+    final = iva + i_p + producto
     print("\033[1;33mEl precio final es: ",round(final,2))
     input("Ingrese cualquier tecla para terminar: ")
 
